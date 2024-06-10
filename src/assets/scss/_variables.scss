@@ -1,0 +1,45 @@
+@use 'sass:map';
+
+$colors: () !default;
+$colors: map.deep-merge((
+    'white': (
+        'base': #FFFFFF
+    ),
+    'black': (
+        'base': #191B1E,
+        'light': #363853
+    ),
+    'grey': (
+        'base': #E0E3E7,
+        'light': #EDEFF2,
+        'dark': #737A86
+    ),
+    'blue': (
+        'base': #2C64E3,
+        'light': #4084D3,
+    ),
+    'red': (
+        'base': #E67676
+    )
+), $colors);
+
+$color-white: map.get($colors, 'white', 'base') !default;
+$color-black: map.get($colors, 'black', 'base') !default;
+$color-black-light: map.get($colors, 'black', 'light') !default;
+$color-grey: map.get($colors, 'grey', 'base') !default;
+$color-grey-light: map.get($colors, 'grey', 'light') !default;
+$color-grey-dark: map.get($colors, 'grey', 'dark') !default;
+$color-blue: map.get($colors, 'blue', 'base') !default;
+$color-blue-light: map.get($colors, 'blue', 'light') !default;
+$color-red: map.get($colors, 'red', 'base') !default;
+
+// Screen Media
+$screen-xs: 375px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1440px;
+$screen-xxl: 1900px;
+
+// Fonts
+$jakarta: 'Plus Jakarta Sans', sans-serif;
