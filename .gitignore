@@ -35,3 +35,4 @@ src/test.ts
 
 # IDE - VSCode
 .vscode
+node_modules
