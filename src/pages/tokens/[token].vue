@@ -26,7 +26,7 @@
                     class="token__buttons-item"
                     @on-click="onDeposit"
                 >
-                    Get
+                    Deposit
                 </app-button>
                 <app-button
                     size="md"
@@ -43,23 +43,19 @@
                     >
                         Buy
                     </app-button>
-                    <app-button
-                        size="md"
-                        class="token__buttons-item"
-                        @on-click="onSend"
-                    >
-                        Stake
-                    </app-button>
                 </template>
-                
             </div>
         </template>
     </div>
+    <widgets-transactions
+        class="transactions__inner"
+        :currency="user.data?.currency"
+    />
+
 </template>
 
 <script setup lang="ts">
     import type { IWalletBalance } from '@/shared/api/types/Wallet.interface'
-
     import { useUserStore } from '@/stores/user'
     import { useCurrencyStore } from '@/stores/currency'
 
@@ -126,7 +122,6 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
         gap: px-to-rem(32);
         width: 100%;
         padding: px-to-rem(20);
@@ -165,15 +160,9 @@
 
         &__buttons {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: px-to-rem(10);
             align-items: stretch;
+            gap: px-to-rem(10);
         }
-
-        // &__buttons-item {
-        //     width: calc((100% - px-to-rem(10)) / 2);
-        // }
 
         &__buttons-item {
             flex: 1;

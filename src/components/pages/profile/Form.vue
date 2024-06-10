@@ -277,6 +277,7 @@
 
         &__button {
             width: 100%;
+            background-color: #F0AB26;
         }
     }
 </style>

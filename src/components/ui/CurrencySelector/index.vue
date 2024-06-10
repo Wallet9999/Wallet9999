@@ -178,7 +178,7 @@
 
         &__inner-row-rate,
         &__inner-row-balance {
-            color: $color-grey-dark;
+            color: #F0AB26;
             font-size: px-to-rem(13);
             font-weight: 700;
         }

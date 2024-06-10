@@ -3,20 +3,21 @@
 $colors: () !default;
 $colors: map.deep-merge((
     'white': (
-        'base': #FFFFFF
+        'base': #0a0a0a,
+        'light': #1f2124,
     ),
     'black': (
-        'base': #191B1E,
-        'light': #363853
+        'base': #ffffff,
+        'light': white,
     ),
     'grey': (
-        'base': #E0E3E7,
-        'light': #EDEFF2,
-        'dark': #737A86
+        'base': #22262b,
+        'light': #22262b,
+        'dark': #4F5974
     ),
     'blue': (
-        'base': #2C64E3,
-        'light': #4084D3,
+        'base': #f0aa46,
+        'light': #cecece,
     ),
     'red': (
         'base': #E67676
@@ -24,6 +25,7 @@ $colors: map.deep-merge((
 ), $colors);
 
 $color-white: map.get($colors, 'white', 'base') !default;
+$color-white-light: map.get($colors, 'white', 'light') !default;
 $color-black: map.get($colors, 'black', 'base') !default;
 $color-black-light: map.get($colors, 'black', 'light') !default;
 $color-grey: map.get($colors, 'grey', 'base') !default;
@@ -43,3 +45,4 @@ $screen-xxl: 1900px;
 
 // Fonts
 $jakarta: 'Plus Jakarta Sans', sans-serif;
+

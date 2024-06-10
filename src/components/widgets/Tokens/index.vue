@@ -4,6 +4,7 @@
             <h6 class="tokens__header-title">
                 My Balances
             </h6>
+            <Search />
         </div>
         <div class="tokens__inner">
             <div
@@ -38,10 +39,15 @@
 
     import { useUserStore } from '@/stores/user'
 
+    import Search from '@/components/search/index.vue'
+
     import IconLoading from '@/assets/icons/loading.svg?component'
 
     export default defineComponent({
-        components: { IconLoading },
+        components: { 
+            IconLoading,
+            Search
+         },
         setup (_props) {
             const user = useUserStore()
             const loading = ref(false)

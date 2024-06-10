@@ -159,11 +159,11 @@
                 emit('on-input', value)
             }
 
-            //const handleAutoFocus = () => {
-            //    if (!props.autoFocus) return undefined
-            //
-            //    elInput.value?.focus({ preventScroll: true })
-            //}
+            // const handleAutoFocus = () => {
+            //     if (!props.autoFocus) return undefined
+
+            //     elInput.value?.focus({ preventScroll: true })
+            // }
 
             const handleFocus = (event: FocusEvent): void => {
                 emit('on-focus', event)

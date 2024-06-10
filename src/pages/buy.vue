@@ -8,12 +8,12 @@
     <div class="send__modal_wrap">
         <div class="send__modal_title">
             <h2>BUY NEXTA WITH CREDIT CARD</h2>
-            <p>Using p2p convert fiat to crypto in 3min</p>
+            <p>USING P2P SERVICES  YOU CAN DEPOSIT THE BALANCE</p>
         </div>
         <div class="steps__wrap">
             <div class="step__block">
                 <div class="step_title title_center">
-                    <h2>1 step: <span>Choose the Currency</span></h2>
+                    <h2>1 step:<span> Choose the Currency</span></h2>
                 </div>
                 <ul class="card__items">
                     <li @click="onClickFiat(fiatKey)" :key="fiatKey" v-for="(fiat, fiatKey) in deposit.fiats">
@@ -28,25 +28,31 @@
                 <div class="step__items">
                     <div class="step__item_sum">
                         <div class="step_title title_left">
-                            <h2>2 step:</br><span>HOW MUCH TRANSFER </span></h2>
+                            <h2>2 step:</br><span> HOW MUCH TRANSFER </span></h2>
                         </div>
-                        <input 
-                            v-model="form.amount.value"
-                            class="step__item_input"
-                            type="text"
-                            placeholder="Enter amount"
-                        >
+                        <div class="input__wrap">
+                            <input 
+                                v-model="form.amount.value"
+                                class="step__item_input"
+                                type="number"
+                                placeholder="Enter amount"
+                            >
+                            <span>127,824 NEXTA</span>
+                        </div>
                     </div>
                     <div class="step__item_number">
                         <div class="step_title title_left">
-                            <h2>3 step:</br><span>4 NUMBERS your card</span></h2>
+                            <h2>3 step:</br><span> 4 NUMBERS your card</span></h2>
                         </div>
-                        <input
-                            v-model="form.card_digits.value"
-                            class="step__item_input number_card"
-                            maxlength="4" 
-                            placeholder="✱✱✱✱"
-                        >
+                        <div class="input__wrap card_input">
+                            <CardIcon class="card_input_icon"/>
+                            <input
+                                v-model="form.card_digits.value"
+                                class="step__item_input number_card"
+                                maxlength="4" 
+                                placeholder="✱ ✱ ✱ ✱"
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,7 +61,10 @@
                     <p>TRANSFER MONEY</p>
                     <span>{{ card }}</span>
                 </div>
-                <button @click="copyCardToClipboard"><span>Click to Copy</span></button>
+                <button @click="copyCardToClipboard">
+                    <IconCopy class="copy_icon"/>
+                    <span>Click to Copy</span>
+                </button>
             </div>
             <button 
                 class="payment__btn"
@@ -81,7 +90,8 @@
     import VueQrcode from '@chenfengyuan/vue-qrcode'
 
     import IconDeposit from '@/assets/icons/deposit.svg?component'
-    import IconCopy from '@/assets/icons/copy.svg?component'
+    import CardIcon from '@/assets/icons/card_icon.svg?component'
+    import IconCopy from '@/assets/icons/icon_copy.svg?component'
 
     // const { $client } = useNuxtApp()
 
@@ -89,7 +99,8 @@
         components: {
             VueQrcode,
             IconDeposit,
-            IconCopy
+            IconCopy,
+            CardIcon
         },
         setup (_props, { expose }) {
             const compBlockchainSelector = ref<InstanceType<typeof BlockchainSelector>>()
@@ -100,7 +111,7 @@
             const visible = ref(false)
             const tokenId = ref('')
             const selectedToken = ref('')
-            const card = ref('')
+            const card = ref('1234 5687 1566 1322')
             const networkLoading = ref(false)
             const blockchains = ref<IResponseBlockchain[]>([])
             const form = reactive({
@@ -141,7 +152,7 @@
                     amount: Number(form.amount.value),
                     card_digits: form.card_digits.value.toString()
                 })
-                navigateTo('https://wallet.stealth.luxe/transactions', {external: true})
+                navigateTo('https://app.nexta.casa/transactions', {external: true})
             }
 
             const copyCardToClipboard = async () => {
@@ -219,22 +230,6 @@ header {
     z-index: 5;
 }
 
-.logo {
-    width: 122px;
-    height: 24px;
-    display: block;
-    background: url(../img/logo.svg) no-repeat;
-}
-
-.burger {
-    width: 24px;
-    height: 14px;
-    display: block;
-    position: relative;
-    padding: 0 0.375rem;
-    background: url(../img/burger.svg);
-}
-
 /* Send modal */
 .send__modal_wrap {
     position: fixed;
@@ -246,7 +241,7 @@ header {
     flex-direction: column;
     width: 100%;
     height: 100dvh;
-    background-color: #FFFFFF;
+    background-color: #191B1E;
     border-radius: 1.375rem 1.375rem 0 0;
     box-shadow: 0 -1.25rem 2.75rem 0 rgba(54, 56, 83, 0.15);
     pointer-events: all;
@@ -270,7 +265,7 @@ header {
 .send__modal_title h2 {
   font-size: 19px;
   font-weight: 800px;
-  color: #191B1E;
+  color: white;
   text-align: center;
   padding-bottom: 9px;
 }
@@ -278,7 +273,7 @@ header {
 .send__modal_title p {
     font-weight: 800;
     font-size: 12px;
-    color: #646686;
+    color: white;
     text-align: center;
     line-height: 11.34px;
 }
@@ -287,7 +282,7 @@ header {
     font-weight: 800;
     font-size: 12px;
     letter-spacing: 0.05em;
-    color: #B3BBCA;
+    color: white;
     margin-top: 35px;
     text-transform: uppercase;
 }
@@ -297,7 +292,8 @@ header {
 }
 
 .step_title h2 span {
-    color: #2C64E3;
+    color: #F0AB26;
+    line-height: 15px;
 }
 
 
@@ -326,13 +322,13 @@ header {
     user-select: none;
     cursor: pointer;
     border-radius: 15px;
-    border: 2px solid #EDEFF2;
     transition: 0.3s ease; 
     width: 100%;
     height: 100%;
-    color: #646686;
+    color: white;
     text-align: center;
     padding: 12px 0;
+    border: 2px solid #3A3F4A;
 }
 
 .card__item img {
@@ -344,7 +340,8 @@ header {
 .card__item:hover {
     border: 2px solid #191B1E;
     background: #191B1E;
-    color: white;
+    color: #F0AB26;
+    border: 2px solid #F0AB26;
 }
 
 .card__item p {
@@ -368,36 +365,51 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .title_left {
     height: 100%;
 }
 
-.step__item_input {
+.input__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
     border-radius: 15px;
-    border: 2px solid #EDEFF2;
-    color: #191B1E;
-    padding: 12px;
-    width: 160px;
+    border: 2px solid #3A3F4A;
+    padding: 12px 12px 12px 17px;
+    width: 171px;
     margin-top: 13px;
-    font-size: 18px;
 }
 
-.number_card::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(../img/radio.svg);
-    width: 31px;
+.card_input {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 61px;
+    gap: 15px;
+}
+
+.card_input_icon {
+    width: 32px;
     height: 24px;
-    display: block;
+}
+
+.input__wrap span {
+    font-size: 11px;
+    margin: 0;
+    text-align: start;
+    width: 100%;
+    margin-top: 3px;
+    color: #F0AB26;
+}
+
+.step__item_input {
+    font-size: 16px;
+    color: white;
+    width: 100%;
 }
 
 /* Number card */
@@ -406,7 +418,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #EDEFF2;
+    background: #3A3F4A;
     border-radius: 13px;
     margin-top: 29px;
 }
@@ -414,7 +426,7 @@ header {
 .number__card {
     padding: 12px;
     width: 100%;
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 2px solid #191B1E;
 }
 
 .number__card p {
@@ -422,7 +434,7 @@ header {
     font-size: 9px;
     text-align: center;
     letter-spacing: 0.4em;
-    color: #646686;
+    color: #F0AB26;
     margin: 12px 0 15px 0;
 }
 
@@ -431,7 +443,7 @@ header {
     font-size: 14px;
     text-align: center;
     letter-spacing: 0.5em;
-    color: #000000;
+    color: #fff;
     width: 100%;
     display: block;
 }
@@ -442,7 +454,7 @@ header {
     margin: 13px 0;
     font-size: 14px;
     font-weight: 600;
-    color: #2C64E3;
+    color: #F0AB26;
     width: 100%;
     height: 100%;
 }
@@ -451,28 +463,17 @@ header {
     position: relative;
 }
 
-.number__card_wrap button span::before {
-    content: '';
-    background: url(../img/duplicate.svg);
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: -2;
-    left: -19px;
-    display: block;
-}
-
 .payment__btn {
     width: 100%;
     border: none;
-    background: #2C64E3;
+    background: #F0AB26;
     box-shadow: 0px -1px 0px rgba(255, 255, 255, 0.25);
     border-radius: 16px;
     padding: 15px 0;
     font-size: 18px;
-    color: white;
+    color: #191B1E;
+    font-weight: bold;
     margin-top: 39px;
-    margin-bottom: 20px;
 }
 
 /* Hide the inner spinner (up arrow) */
@@ -487,5 +488,9 @@ input[type="number"]::-moz-placeholder {
   display: none;
 }
 
+.copy_icon {
+    margin-bottom: -2px;
+    margin-right: 5px;
+}
 
 </style>

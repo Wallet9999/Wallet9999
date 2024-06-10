@@ -1,8 +1,5 @@
 <template>
     <div class="login">
-        <div class="image-login">
-            <login-stealth class="login__login-logo" />
-        </div>
         <div class="login__inner">
             <div class="login__header">
                 <h1 class="login__header-title">
@@ -47,7 +44,7 @@
 
 <script setup lang="ts">
     import { definePageMeta } from '#imports'
-    import LoginStealth from '@/assets/logos/Frame1.svg?component'
+
     import { useAuth } from '@/composables/useAuth'
 
     const auth = useAuth()
@@ -116,14 +113,6 @@
         width: 100%;
         padding: px-to-rem(30) px-to-rem(20) px-to-rem(20);
 
-
-        &__login-logo {
-            display: flex;
-            width: 370px;
-            height: auto;
-            margin: 0 auto;
-        }
-    
         &__inner {
             display: flex;
             flex-direction: column;
@@ -167,12 +156,11 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin: px-to-rem(8) px-to-rem(0);
             color: $color-white;
-            background: $color-blue-light;
+            background: #F0AB26;
             font-size: px-to-rem(18);
             font-weight: 700;
-            padding: px-to-rem(9);
+            padding: 9px;
         }
 
         &__button {

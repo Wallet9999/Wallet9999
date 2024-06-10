@@ -4,7 +4,7 @@
             loop
             class="slider__inner"
             :modules="modules"
-            :slides-per-view="1"
+            :slides-per-view="2"
             :space-between="10"
             :pagination="{ clickable: true }"
             @slideChange="onSlideChange"
@@ -48,23 +48,23 @@
             const data: Slide[] = [
                 {
                     image: 'wallet',
-                    title: 'Safe and Fast',
-                    description: 'Try the wallet with the most effective protect protocols'
+                    title: 'Name of Collection',
+                    description: '0.002  ETH'
                 },
                 {
                     image: 'exchange',
-                    title: 'No Ban. No Charge Back',
-                    description: 'Forget about chargebacks and banking money holds'
+                    title: 'NFT Name Collection',
+                    description: '0.055  ETH'
                 },
                 {
-                    image: 'settings',
-                    title: 'Unlimited Exchange',
-                    description: 'Exchange more the 700+ tokens and 100+ currencies'
+                    image: 'wallet',
+                    title: 'Name of Collection',
+                    description: '0.002  ETH'
                 },
                 {
-                    image: 'eye',
-                    title: 'No KYC',
-                    description: 'All users are staying incognito without KYC protocols to have clear experience'
+                    image: 'exchange',
+                    title: 'NFT Name Collection',
+                    description: '0.055  ETH'
                 }
             ]
 
@@ -99,6 +99,7 @@
 
         &__item {
             width: 100%;
+            height: 82px;
         }
 
         &__item-icon {

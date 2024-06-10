@@ -31,7 +31,7 @@ body,
     overflow-x: hidden;
     color: $color-black;
     font-family: $jakarta;
-    background-color: $color-white;
+    background-color: #191B1E;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -52,6 +52,10 @@ body,
 }
 
 // general
+body {
+    padding-bottom: 50px;
+}
+
 h1,
 h2,
 h3,
@@ -88,6 +92,10 @@ input[type=password]::-ms-clear {
     display: none;
 }
 
+input::placeholder {
+    color: white !important;
+}
+
 // scroll lock
 .scroll-lock {
     overflow: hidden;
@@ -113,4 +121,8 @@ input[type=password]::-ms-clear {
 .page-enter-from,
 .page-leave-to {
     opacity: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background: #F0AB26 !important;
 }

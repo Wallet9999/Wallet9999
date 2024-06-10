@@ -248,4 +248,8 @@
             transform: translateY(100%);
         }
     }
+
+    .app-modal__block-inner__swiper-handler {
+        background-color: #F0AB26;
+    }
 </style>

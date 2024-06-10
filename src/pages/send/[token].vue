@@ -144,17 +144,17 @@
                         v-model="form.fee"
                         placeholder="Fee"
                     /> -->
-                    <div style="position: absolute; top: 102px; right: 6px; padding: 8px 10px 8px 6px; display: flex; justify-content: center; align-items: center; border-radius: 8px; background: #ffffff; border: 1px solid #eee;"
+                    <div style="position: absolute; top: 102px; right: 6px; padding: 8px 10px 8px 6px; display: flex; justify-content: center; align-items: center; border-radius: 8px; background: #232324; border: 1px solid #3A3F4A;"
                     @click="onTokenTitleArrowClick">
                         <div v-if="!scannerActive" id="qr-open">
                             <svg style="width: 20px; height: 20px;">
-                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4V4Zm10 10h6v6h-6v-6Zm0-10h6v6h-6V4Zm-4 10h.01v.01H10V14Zm0 4h.01v.01H10V18Zm-3 2h.01v.01H7V20Zm0-4h.01v.01H7V16Zm-3 2h.01v.01H4V18Zm0-4h.01v.01H4V14Z"/>
-                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M7 7h.01v.01H7V7Zm10 10h.01v.01H17V17Z"/>
+                                <path stroke="#F0AB26" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4V4Zm10 10h6v6h-6v-6Zm0-10h6v6h-6V4Zm-4 10h.01v.01H10V14Zm0 4h.01v.01H10V18Zm-3 2h.01v.01H7V20Zm0-4h.01v.01H7V16Zm-3 2h.01v.01H4V18Zm0-4h.01v.01H4V14Z"/>
+                                <path stroke="#F0AB26" stroke-linejoin="round" stroke-width="2" d="M7 7h.01v.01H7V7Zm10 10h.01v.01H17V17Z"/>
                             </svg>
                         </div>
                         <div v-if="scannerActive" id="qr-close">
                             <svg class="w-[28px] h-[28px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M6 18 17.94 6M18 18 6.06 6"/>
+                                <path stroke="#F0AB26" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M6 18 17.94 6M18 18 6.06 6"/>
                             </svg>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                     :disabled="!valid"
                     @on-click="onWithdrawal"
                 >
-                    <icon-confirm class="token__form-button-icon" />
+                    <icon-confirm class="token__form-button-icon " />
                     Confirm Withdrawal
                 </app-button>
             </div>
@@ -262,6 +262,7 @@
 
         &__form-button {
             width: 100%;
+            color: white;
         }
 
         &__form-button-icon {

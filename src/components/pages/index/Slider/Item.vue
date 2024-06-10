@@ -82,14 +82,15 @@
 
         &__inner-title {
             color: $color-black;
-            font-size: px-to-rem(15);
+            font-size: px-to-rem(12);
             font-weight: 700;
         }
 
         &__inner-description {
             color: $color-black-light;
-            font-size: px-to-rem(12);
+            font-size: px-to-rem(9);
             font-weight: 600;
+            color: $color-blue;
         }
     }
 </style>

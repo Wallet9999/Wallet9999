@@ -49,10 +49,6 @@
                     icon: IconClock,
                     text: 'Transfers usually take a few hours to appear on your Revolut account.'
                 },
-                {
-                    icon: IconFlag,
-                    text: 'Only local transfers are accepted. For international transfers, please use the SWIFT details found above.'
-                }
             ]
 
             return {
@@ -69,14 +65,14 @@
     .note {
         position: relative;
         width: 100%;
-        padding: px-to-rem(20);
+        padding: px-to-rem(30);
         background-color: $color-grey-light;
         border-radius: px-to-rem(12);
 
         &__inner {
             display: flex;
             flex-direction: column;
-            gap: px-to-rem(32);
+            gap: px-to-rem(20);
         }
 
         &__inner-item {

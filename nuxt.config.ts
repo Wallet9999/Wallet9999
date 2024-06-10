@@ -36,7 +36,7 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: 'en'
             },
-            title: 'Stealth Wallet',
+            title: 'Nexta Token',
             meta: [{
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1'
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
                 rel: 'icon',
                 type: 'image/png',
                 sizes: '32x32',
-                href: '/favicon-32x32.png'
+                href: '/nexta_logo.png'
             }, {
                 rel: 'icon',
                 type: 'image/png',

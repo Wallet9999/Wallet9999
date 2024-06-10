@@ -39,12 +39,12 @@
     "mitt": "^3.0.1",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",
-    "primevue": "^3.52.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "swiper": "^11.1.1",
     "vite-plugin-ssr": "^0.4.142",
     "vue-barcode-reader": "^1.0.3",
-    "vue-sonner": "^1.0.3"
+    "vue-sonner": "^1.0.3",
+    "vue-tradingview-widgets": "^1.2.4"
   },
   "overrides": {
     "vue": "latest"

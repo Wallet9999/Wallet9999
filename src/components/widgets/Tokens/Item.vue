@@ -95,6 +95,7 @@
             &__image {
                 width: px-to-rem(40);
                 height: px-to-rem(40);
+                border-radius: 50%;
             }
 
             &__column {

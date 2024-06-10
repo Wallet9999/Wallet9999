@@ -258,6 +258,7 @@
             gap: px-to-rem(8);
             height: 100%;
             transition: inherit;
+            color: white;
         }
 
         &__inner-loader {

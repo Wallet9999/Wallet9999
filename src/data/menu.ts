@@ -25,7 +25,7 @@ export const menu: MenuItem[] = [
     },
     {
         id: 2,
-        path: '/howitworks',
+        path: '/',
         text: 'How it Works?',
         protected: false,
     },

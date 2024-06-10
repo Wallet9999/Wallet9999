@@ -99,7 +99,7 @@
         }
 
         &__inner-data-text {
-            color: rgba(54, 56, 83, .25);
+            color: #F0AB26;
             font-size: px-to-rem(15);
             font-weight: 700;
 
@@ -130,7 +130,7 @@
         }
 
         &__inner-logout-text {
-            color: inherit;
+            color: #F0AB26;
             font-size: px-to-rem(15);
             font-weight: 700;
         }

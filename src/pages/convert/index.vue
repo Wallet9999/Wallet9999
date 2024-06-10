@@ -54,6 +54,7 @@
     import { useWallet } from '@/composables/useWallet'
     import { useBus } from '@/composables/useBus'
 
+
     import IconArrow from '@/assets/icons/arrow.svg?component'
 
     type FormField = 'send' | 'receive'

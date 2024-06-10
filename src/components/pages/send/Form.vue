@@ -17,12 +17,20 @@
                 @on-change-currency="(value: string) => form.currency = value"
             />
             <app-input
-                v-model="form.name"
-                placeholder="Enter name"
+                v-model="form.firstName"
+                placeholder="First name"
+            />
+            <app-input
+                v-model="form.lastName"
+                placeholder="Last name"
             />
             <app-input
                 v-model="form.iban"
-                placeholder="Enter IBAN"
+                placeholder="IBAN or Card"
+            />
+            <app-input
+                v-model="form.bank"
+                placeholder="Bank name"
             />
         </div>
     </div>
@@ -51,8 +59,10 @@
             const user = useUserStore()
             const form = reactive({
                 currency: '',
-                name: '',
-                iban: ''
+                firstName: '',
+                lastName: '',
+                iban: '',
+                bank: ''
             })
 
             const onFocus = () => {
@@ -62,8 +72,10 @@
             watch(() => form, () => {
                 emit('on-form-change', {
                     currency: form.currency,
-                    name: form.name,
-                    iban: form.iban
+                    firstName: form.firstName,
+                    lastName: form.lastName,
+                    iban: form.iban,
+                    bank: form.bank
                 })
             }, { deep: true })
 

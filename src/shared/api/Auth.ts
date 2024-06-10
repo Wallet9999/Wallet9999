@@ -11,7 +11,7 @@ import type {
 } from '@/shared/api/types/Auth.interface'
 
 import { Base } from '@/shared/api/Base'
-  
+
 export class Auth extends Base {
     constructor(api: AxiosInstance) {
         super(api)
@@ -26,6 +26,7 @@ export class Auth extends Base {
 
         return this.makeRequest<ILink>(config)
     }
+
     async confirmEmail(data: IRequestAuthConfirmEmail): Promise<IResponseAuthTokens> {
         const config: AxiosRequestConfig = {
             method: 'POST',

@@ -128,7 +128,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            flex-grow: 1;
+            padding-bottom: 70px;
         }
 
         &__form-inner {
@@ -139,6 +139,8 @@
 
         &__form-button {
             width: 100%;
+            color: white;
+            margin-top: 20px;
         }
 
         &__form-button-icon {

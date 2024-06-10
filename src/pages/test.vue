@@ -1,9 +1,7 @@
 <template>
     <header>
         <section class="top__menu">
-            <a href="/" class="logo">
-                <StealthLogo />
-            </a>
+            <a href="/" class="logo"></a>
             <button class="burger">
                 <span></span>
             </button>
@@ -13,32 +11,46 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide_item">
-                            <img src="../public/images/landing/group1321315184.png" alt="">
-                            <h1>NEXTA is Availible</h1>
-                            <p>Token Listing on the Stealth Wallet of the Crypto-Currency market</p>
+                            <img src="/images/test/Group 1321315034.png" alt="">
+                            <h1>Fastest Crypto Bank</h1>
+                            <p>Your easiest way to convert crypto to fiat online without card</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide_item">
-                            <img src="../public/images/landing/group1321315193.png" alt="">
-                            <h1>Crypto to Fiat Exchange</h1>
-                            <p>Use full cicle of exchange and deposits of Stealth Wallet</p>
+                            <img src="/images/test/Group 1321315034.png" alt="">
+                            <h1>Fastest Crypto Bank</h1>
+                            <p>Your easiest way to convert crypto to fiat online without card</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide_item">
-                            <img src="../public/images/landing/group1321315194.png" alt="">
-                            <h1>Safety Staking Models</h1>
-                            <p>Advices and Tips mechanism share to you when to invest in tokens better</p>
+                            <img src="/images/test/Group 1321315034.png" alt="">
+                            <h1>Fastest Crypto Bank</h1>
+                            <p>Your easiest way to convert crypto to fiat online without card</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide_item">
+                            <img src="/images/test/Group 1321315034.png" alt="">
+                            <h1>Fastest Crypto Bank</h1>
+                            <p>Your easiest way to convert crypto to fiat online without card</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide_item">
+                            <img src="/images/test/Group 1321315034.png" alt="">
+                            <h1>Fastest Crypto Bank</h1>
+                            <p>Your easiest way to convert crypto to fiat online without card</p>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination bullets"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </section>
-        <a href="#" class="sing_button">Sign In</a>
     </header>
     <main>
+        <a href="#" class="sing_button">Sign In</a>
         <section class="community">
             <h2>Connect to web3 community</h2>
             <ul class="community__icons_row">
@@ -91,88 +103,35 @@
             </div>
         </section>
         <section class="cards">
-            <h2>Watch video <span>Guide</span> about Stealth Wallet</h2>
-            <button class="card">
-                <img src="/images/landing/card_icon.png" alt="">
-                <span>Login and Create account Wallet</span>
-                <div class="modal__card">
-                    <div class="modal__card_modal-content">
-                        <span class="close">&times;</span>
-                        <video src="" controls></video>
-                    </div>
-                </div>
-            </button>
-            <button class="card">
-                <img src="/images/landing/card_icon.png" alt="">
-                <span>Login and Create account Wallet</span>
-                <div class="modal__card">
-                    <div class="modal__card_modal-content">
-                        <span class="close">&times;</span>
-                        <video src="" controls></video>
-                    </div>
-                </div>
-            </button>
-            <button class="card">
-                <img src="/images/landing/card_icon.png" alt="">
-                <span>Login and Create account Wallet</span>
-                <div class="modal__card">
-                    <div class="modal__card_modal-content">
-                        <span class="close">&times;</span>
-                        <video src="" controls></video>
-                    </div>
-                </div>
-            </button>
-            <button class="card">
-                <img src="/images/landing/card_icon.png" alt="">
-                <span>Login and Create account Wallet</span>
-                <div class="modal__card">
-                    <div class="modal__card_modal-content">
-                        <span class="close">&times;</span>
-                        <video src="" controls></video>
-                    </div>
-                </div>
-            </button>
-            <button class="card">
-                <img src="/images/landing/card_icon.png" alt="">
-                <span>Login and Create account Wallet</span>
-                <div class="modal__card">
-                    <div class="modal__card_modal-content">
-                        <span class="close">&times;</span>
-                        <video src="" controls></video>
-                    </div>
-                </div>
-            </button>
-            <button class="card">
-                <img src="/images/landing/card_icon.png" alt="">
-                <span>Login and Create account Wallet</span>
-                <div class="modal__card">
-                    <div class="modal__card_modal-content">
-                        <span class="close">&times;</span>
-                        <video src="" controls></video>
-                    </div>
-                </div>
-            </button>
+            <a href="#" class="card"><img src="/images/test/Group1.jpg" alt=""></a>
+            <a href="#" class="card"><img src="/images/test/Group2.jpg" alt=""></a>
+            <a href="#" class="card"><img src="/images/test/Group3.jpg" alt=""></a>
+            <a href="#" class="card"><img src="/images/test/Group4.jpg" alt=""></a>
+            <a href="#" class="card"><img src="/images/test/Group5.jpg" alt=""></a>
+            <a href="#" class="card"><img src="/images/test/Group6.jpg" alt=""></a>
         </section>
         <section class="product__box">
             <div class="product__box_item">
                 <div class="box_item">
                     <h2>100+ banks supported</h2>
-                    <p>Our network support <span>0% commision</span> with
+                    <p>Our network support <span></br>0% commision</span> with
                         global banks and provide you fastern way how to withdraw money.</p>
+                    <a href="#" class="community__link">Watch the prices</a>
                 </div>
                 <img src="/images/test/Version-2.png" alt="">
             </div>
-            <div class="product__box_item box_item_revers">
-                <img src="../public/images/landing/image389.png" alt="">
+            <div class="product__box_item">
                 <div class="box_item">
                     <h2>240+ tokens and expands support</h2>
                     <p>Each Deposit has registred as smart contract in blockchain
-                        network during the withdrawal with 100% chance</p>
+                        network during the withdrawal with 100%chance</p>
+                    <a href="#" class="community__link">Read the WhitePaper</a>
                 </div>
+                <img src="/images/test/Version-4.png" alt="">
             </div>
         </section>
         <section class="designed__wrap">
-            <img src="/images/landing/stamp.png" alt="">
+            <img src="/images/test/istockphoto-1159711738-1024x1024 1.png" alt="">
             <h2>Designed with Pation</h2>
             <p>1 year of seasoned team of designers and developer propose the level to the market</p>
             <a href="#" class="sing_button">Sign In</a>
@@ -232,7 +191,7 @@
                         <path stroke="#363853" stroke-linecap="round" stroke-width="2.3"
                               d="m13.8 10.5-.3.7a6.2 6.2 0 0 0-.4 3.7 4.7 4.7 0 0 0 3.8 3.7h2.2a4.7 4.7 0 0 0 3.8-3.7c.2-1.2 0-2.5-.4-3.7l-.3-.7" />
                     </svg>
-                    <p>Best partner for E-commers stores and SaaS products</p>
+                    <p>Best partner for</br>E-commers stores and SaaS products</p>
                     <a href="#" class="community__link">Documentation</a>
                 </div>
             </div>
@@ -367,9 +326,7 @@
         </div>
         <div class="footer">
             <div class="footer__left_column">
-                <a href="/" class="logo">
-                    <StealthLogoBlack/>
-                </a>
+                <a href="/" class="logo"></a>
                 <ul class="footer__menu">
                     <li><a href="#" class="community__link">Homepage</a></li>
                     <li><a href="#" class="community__link">About Company</a></li>
@@ -399,13 +356,9 @@
 
 <script setup lang="ts">
     import { definePageMeta } from '#imports'
-    import StealthLogo from '@/assets/logos/stealth_logo.svg?component'
-    import StealthLogoBlack from '@/assets/logos/stealth_logo_black.svg?component'
-    import IconDeposit from '@/assets/logos/stealth_logo.svg?component'
 
     import Swiper from 'swiper'
     import 'swiper/css'
-    import 'swiper/css/pagination'
 
     const ratingResult = ref<HTMLDivElement>()
     const stars = ref<HTMLElement[]>([])
@@ -456,41 +409,9 @@
         }
     }
 
-    const cardsModal = () => {
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            const modal = card.querySelector('.modal__card') as HTMLElement;
-            const video = modal.querySelector('video') as HTMLVideoElement;
-            const closeBtn = modal.querySelector('.close') as HTMLElement;
-            const videoSrc = card.getAttribute('data-video-src') as string;
-
-            card.addEventListener('click', () => {
-                video.src = videoSrc;
-                modal.style.display = 'block';
-            });
-
-            closeBtn.addEventListener('click', () => {
-                modal.style.display = 'none';
-                video.pause();
-                video.src = '';
-            });
-
-            window.addEventListener('click', (event) => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                    video.pause();
-                    video.src = '';
-                }
-            });
-        });
-    };
-
-
     onMounted(() => {
         slider()
         rating()
-        cardsModal()
     })
 
     definePageMeta({
@@ -576,13 +497,9 @@
     /*Header*/
     header {
         width: 100%;
-        background: url(/images/landing/back.png) no-repeat;
-        background-color: #191B1E;
-        background-size: cover;
-        background: url(../public/back.png);
-        background-color: #191B1E;
+        background: #E0E3E7;
         border-radius: 0px 0px 23px 23px;
-        padding: 18px 18px 30px 18px;
+        padding: 11px 18px;
     }
 
     .top__menu {
@@ -593,9 +510,9 @@
     }
 
     .logo {
-        background: url(../public/nexta_logo.png) no-repeat;
-        width: 130px;
-        height: 24px;
+        background: url(../images/test/logo.png) no-repeat;
+        width: 110px;
+        height: 30px;
         display: block;
         transition: 0.3s ease;
     }
@@ -620,7 +537,7 @@
         top: 7px;
         left: 0;
         display: block;
-        background-color: white;
+        background-color: #363853;
     }
 
     .burger::before {
@@ -630,7 +547,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: white;
+        background-color: #363853;
     }
 
     .burger::after {
@@ -640,7 +557,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: white;
+        background-color: #363853;
     }
 
     .burger:hover {
@@ -675,14 +592,15 @@
         max-width: 100%;
         height: auto;
         text-align: center;
+        margin-top: 34px;
+        margin-bottom: 29px;
     }
 
     .slide_item h1 {
         font-weight: 800;
         font-size: 26px;
         line-height: 33px;
-        color: white;
-        width: 308px;
+        color: #191B1E;
     }
 
     .slide_item p {
@@ -690,32 +608,31 @@
         font-size: 13px;
         line-height: 16px;
         text-align: center;
-        color: #AAB1B7;
         margin-top: 12px;
+        width: 206px;
     }
 
-    .swiper-pagination {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 8px;
-        height: 8px;
-        background-color: transparent;
+    .bullets {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.25);
-        border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.25);
-        background-color: #191B1E;
+        gap: 4px;
+        justify-content: center;
+        position: absolute;
+        bottom: 14px !important;
     }
 
-    .swiper-pagination-bullet-active {
+    .bullets .swiper-pagination-bullet {
         width: 8px;
         height: 8px;
-        background-color: white;
-        border: white 2px solid;
+        border: #555555 2px solid;
+        border-radius: 50%;
+        background: none;
+    }
+
+    .bullets .swiper-pagination-bullet-active {
+        width: 8px;
+        height: 8px;
+        background-color: #191B1E;
+        border: #191B1E 2px solid;
         border-radius: 50%;
     }
 
@@ -883,39 +800,14 @@
         gap: 4px;
     }
 
-    .cards h2 {
-        font-weight: 800;
-        font-size: 25px;
-        line-height: 32px;
-        color: #191B1E;
-        margin-bottom: 30px;
-    }
-
-    .cards h2 span {
-        color: #2C64E3;
-    }
-
     .card {
         width: 170px;
-        height: 205px;
+        height: auto;
         transition: 0.3s ease;
-        background: #EEF0F2;
-        border-radius: 9.61282px;
-        padding: 11px;
     }
 
     .card:hover {
         opacity: 0.6;
-    }
-
-    .card span {
-        font-weight: 800;
-        font-size: 12px;
-        line-height: 15px;
-        text-align: center;
-        color: #4F5660;
-        margin-top: 10px;
-        display: block;
     }
 
     .card img {
@@ -923,17 +815,18 @@
         width: 100%;
     }
 
+
     /*Product box*/
     .product__box {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 108px;
+        gap: 148px;
     }
 
     .product__box_item {
-        padding: 0 23px 0 23px;
+        padding: 0 0 0 23px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -951,7 +844,6 @@
         justify-content: start;
         position: relative;
         z-index: 5;
-        margin-top: 20px;
     }
 
     .box_item h2 {
@@ -975,16 +867,6 @@
     .box_item span {
         color: #2C64E3;
     }
-
-    .box_item_revers {
-        flex-direction: row-reverse;
-    }
-
-    .box_item_revers img{
-        top: 0;
-        left: 0;
-    }
-
 
 
     /*Designed*/
@@ -1018,7 +900,7 @@
 
     .phone {
         position: absolute;
-        transform: translateY(275px);
+        transform: translateY(240px);
     }
 
 
@@ -1355,49 +1237,4 @@
         color: #C6C6C7;
         font-family: 'Poppins';
     }
-
-
-    /*Modal*/
-.modal__card {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); 
-}
-
-.modal__card_modal-content {
-    background-color: white; 
-    padding: 20px;
-    border: 1px solid #888;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 361px;
-    height: 441px;
-    background: #EEF0F2;
-    border-radius: 33px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    opacity: 1; 
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
 </style>

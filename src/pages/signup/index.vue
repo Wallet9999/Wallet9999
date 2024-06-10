@@ -3,13 +3,13 @@
         <div class="signup__inner">
             <div class="signup__header">
                 <h1 class="signup__header-title">
-                    Sign Up
+                    Create
                 </h1>
                 <nuxt-link
                     to="/login"
                     class="signup__header-link"
                 >
-                    Log In
+                    Enter
                 </nuxt-link>
             </div>
             <div class="signup__form">

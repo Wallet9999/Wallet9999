@@ -5,16 +5,19 @@
                 v-if="user.data !== null"
                 class="balance__inner-value"
             >
+                {{ convertCurrency(user.data?.usd_balance, user.data?.currency)?.toFixed(2) }}
                 <span class="balance__inner-value balance__inner-value--currency">
                     {{ getCurrencySymbol(user.data?.currency) }}
                 </span>
-                {{ convertCurrency(user.data?.usd_balance, user.data?.currency)?.toFixed(2) }}
+                <div class="token__user">
+                    0.00 <span>NEXT</span>
+                </div>
             </div>
             <div class="balance__inner-buttons">
                 <div class="balance__inner-buttons__item">
                     <app-button
                         icon
-                        class="balance__inner-buttons__item-element"
+                        class="balance__inner-buttons__item-element color_bg"
                         @on-click="onDeposit"
                     >
                         <template #icon>
@@ -33,7 +36,7 @@
                         @on-click="onConvert"
                     >
                         <template #icon>
-                            <icon-exchange class="balance__inner-buttons__item-icon" />
+                            <icon-exchange class="balance__inner-buttons__item-icon size" />
                         </template>
                     </app-button>
                     <p class="balance__inner-buttons__item-label">
@@ -41,6 +44,21 @@
                     </p>
                 </div>
                 <div class="balance__inner-buttons__item">
+                    <app-button
+                        icon
+                        color="black"
+                        class="balance__inner-buttons__item-element"
+                        @on-click="onSend"
+                    >
+                        <template #icon>
+                            <IconCup class="balance__inner-buttons__item-icon" />
+                        </template>
+                    </app-button>
+                    <p class="balance__inner-buttons__item-label">
+                        AirDrop
+                    </p>
+                </div>
+                <div class="balance__inner-buttons__item balance__bg">
                     <app-button
                         icon
                         color="black"
@@ -57,6 +75,7 @@
                 </div>
             </div>
         </div>
+        <FooterMenu />
     </div>
 </template>
 
@@ -67,19 +86,25 @@
     import { useCurrencyStore } from '@/stores/currency'
     import { useBus } from '@/composables/useBus'
 
+    import FooterMenu from '@/components/FooterMenu/index.vue';
+
     import IconPlus from '@/assets/icons/plus.svg?component'
-    import IconExchange from '@/assets/icons/exchange.svg?component'
-    import IconUpload from '@/assets/icons/upload.svg?component'
+    import IconExchange from '@/assets/icons/icon_24.svg?component'
+    import IconUpload from '@/assets/icons/load_circle.svg?component'
+    import IconCup from '@/assets/icons/cup.svg?component'
 
     export default defineComponent({
         components: {
             IconPlus,
             IconExchange,
-            IconUpload
+            IconUpload,
+            IconCup,
+            FooterMenu
         },
         emits: [
             'on-deposit',
             'on-convert',
+            'on-game',
             'on-send'
         ],
         setup (_props, { emit }) {
@@ -103,6 +128,10 @@
                 emit('on-send')
             }
 
+            const onGame = () => {
+                emit('on-game')
+            }
+
             return {
                 user,
                 onDeposit,
@@ -110,7 +139,8 @@
                 onSend,
                 convertCurrency,
                 getCurrencyRate,
-                getCurrencySymbol
+                getCurrencySymbol,
+                onGame
             }
         }
     })
@@ -126,7 +156,7 @@
         width: 100%;
         height: px-to-rem(330);
         padding: px-to-rem(100) px-to-rem(40) px-to-rem(24);
-        background: $color-grey;
+        background: linear-gradient(180deg, #1A1A1A 0%, #22262C 100%);
         border-radius: 0 0 px-to-rem(22) px-to-rem(22);
 
         &__inner {
@@ -143,9 +173,10 @@
             color: $color-black;
             font-size: px-to-rem(32);
             font-weight: 700;
+            margin-top: 10px;
 
             &--currency {
-                color: rgba(0, 0, 0, .3);
+                color: rgba(255, 255, 255, 0.3);
             }
         }
 
@@ -168,8 +199,8 @@
             }
 
             &__item-icon {
-                fill: $color-white;
-                stroke: $color-white;
+                fill: #404246;
+                stroke: white;
             }
 
             &__item-label {
@@ -177,6 +208,38 @@
                 font-size: px-to-rem(13);
                 font-weight: 600;
             }
+
+            &__bg {
+                border-color: #404246;
+            }
         }
+    }
+
+    .token__user {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: #F0AB26;
+        margin-top: 8px;
+    }
+
+    .token__user span{
+        color: #626466;
+    }
+
+    .balance__inner-buttons__item-element {
+       background-color: #404246;
+    }
+
+    .color_bg {
+        background-color: #F0AB26;
+    }
+
+    .color_bg svg {
+        stroke: #404246;
+    }
+    .size {
+        width: 1.3rem;
     }
 </style>

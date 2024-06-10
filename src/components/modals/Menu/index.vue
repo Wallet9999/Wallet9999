@@ -240,11 +240,17 @@
             align-items: center;
             gap: px-to-rem(8);
             width: 100%;
+            background-color: #212327;
+            color: #F0AB26;
         }
 
         &__footer-button-icon {
             width: px-to-rem(24);
             height: auto;
         }
+    }
+
+    .modal__body-menu__item {
+        background-color: #212327;
     }
 </style>

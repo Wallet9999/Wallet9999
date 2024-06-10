@@ -15,6 +15,7 @@
             <modals-fiat ref="compModalFiat" />
         </client-only>
     </div>
+    <FooterMenu />
 </template>
 
 <script lang="ts">
@@ -22,6 +23,7 @@
     import type ModalDeposit from '@/components/modals/Deposit/index.vue'
     import type ModalTransactionSuccess from '@/components/pages/index/modals/TransactionSuccess.vue'
     import type ModalFiat from '@/components/modals/Fiat/index.vue'
+    import FooterMenu from '@/components/FooterMenu/index.vue';
 
     import { defineComponent } from '#imports'
 

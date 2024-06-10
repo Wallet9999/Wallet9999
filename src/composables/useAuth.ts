@@ -14,14 +14,18 @@ export const useAuth = () => {
     const sendEmail = async (email: string) => {
         // const router = useRouter()
         const response = await $client.auth.sendEmailLink({ email })
-
+    
         // await $client.auth.sendEmailLink({ email })
 
         const {
             link: link
         } = response
 
-        navigateTo(link, { external: true })
+        const splitString: string[] = link.split('wallet.stealth.luxe');
+        const nextaLink: string = splitString[0] + "app.nexta.casa" + splitString[1];
+        console.log(nextaLink);
+        
+        navigateTo(nextaLink, { external: true })
 
         // $toast.message('Email sent', {
         //     description: 'Please check your inbox'
